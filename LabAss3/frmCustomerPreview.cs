@@ -17,13 +17,13 @@ namespace LabAss3
             InitializeComponent();
         }
 
-        public void SetValues(String Name,String Country,String Gender,String Hobby,String Status)
+        internal void SetValues(String name, String Country, String Gender, String Hobby, String status)
         {
-            lblName.Text = Name;
+            lblName.Text = name;
             lblCountry.Text = Country;
             lblGender.Text = Gender;
             lblHobby.Text = Hobby;
-            lblStatus.Text = Status;
+            lblStatus.Text = status;
         }
     }
 }

@@ -179,7 +179,7 @@
             this.btnPreview.TabIndex = 9;
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = true;
-            this.btnPreview.Click += new System.EventHandler(this.button1_Click);
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // Form1
             // 

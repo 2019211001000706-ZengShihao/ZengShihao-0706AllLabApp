@@ -17,17 +17,29 @@ namespace LabAss3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPreview_Click(object sender, EventArgs e)
         {
             string Gender, Hobby, Status = "";
+
             if (radioMale.Checked) Gender = "Male";
             else Gender = "Female";
             if (chkReading.Checked) Hobby = "Reading";
             else Hobby = "Painting";
             if (radioMale.Checked) Status = "Married";
             else Status = "Unmarried";
-            frmCustomerPreview objPreview = new frmCustomerPreview();
-            objPreview.SetValues(txtName.Text, cmbCountry.Text, Gender, Hobby, Status);
+
+            try
+            {
+                CustomerValidation objval = new CustomerValidation();
+                objval.CheckCustomerName(txtName.Text);
+                frmCustomerPreview objPreview = new frmCustomerPreview();
+                objPreview.SetValues(txtName.Text, cmbCountry.Text, Gender, Hobby, Status);
+                objPreview.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString);
+            }
         }
     }
 }
