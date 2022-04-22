@@ -1,33 +1,33 @@
 ﻿namespace LabAss3
 {
-        partial class Form1
+    partial class Form1
+    {
+        /// <summary>
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
         {
-            /// <summary>
-            /// 必需的设计器变量。
-            /// </summary>
-            private System.ComponentModel.IContainer components = null;
-
-            /// <summary>
-            /// 清理所有正在使用的资源。
-            /// </summary>
-            /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
-            protected override void Dispose(bool disposing)
+            if (disposing && (components != null))
             {
-                if (disposing && (components != null))
-                {
-                    components.Dispose();
-                }
-                base.Dispose(disposing);
+                components.Dispose();
             }
+            base.Dispose(disposing);
+        }
 
-            #region Windows 窗体设计器生成的代码
+        #region Windows 窗体设计器生成的代码
 
-            /// <summary>
-            /// 设计器支持所需的方法 - 不要修改
-            /// 使用代码编辑器修改此方法的内容。
-            /// </summary>
-            private void InitializeComponent()
-            {
+        /// <summary>
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.txtCustomerName = new System.Windows.Forms.Label();
             this.txtCountry = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -42,8 +42,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPreview = new System.Windows.Forms.Button();
+            this.dtgCustomer = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCustomerName
@@ -201,20 +207,79 @@
             // 
             // btnPreview
             // 
-            this.btnPreview.Location = new System.Drawing.Point(118, 309);
+            this.btnPreview.Location = new System.Drawing.Point(81, 309);
             this.btnPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPreview.Name = "btnPreview";
-            this.btnPreview.Size = new System.Drawing.Size(116, 25);
+            this.btnPreview.Size = new System.Drawing.Size(86, 27);
             this.btnPreview.TabIndex = 13;
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dtgCustomer
+            // 
+            this.dtgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCustomer.Location = new System.Drawing.Point(342, 30);
+            this.dtgCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgCustomer.Name = "dtgCustomer";
+            this.dtgCustomer.RowHeadersWidth = 62;
+            this.dtgCustomer.RowTemplate.Height = 30;
+            this.dtgCustomer.Size = new System.Drawing.Size(494, 251);
+            this.dtgCustomer.TabIndex = 14;
+            this.dtgCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCustomer_CellClick);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(200, 309);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 27);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(81, 351);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(86, 27);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(43, 358);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 12);
+            this.lblID.TabIndex = 17;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(200, 351);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(79, 27);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 375);
+            this.ClientSize = new System.Drawing.Size(861, 409);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dtgCustomer);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -228,32 +293,37 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Customer Data Entry Screen";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            }
-
-            #endregion
-
-            private System.Windows.Forms.Label txtCustomerName;
-            private System.Windows.Forms.Label txtCountry;
-            private System.Windows.Forms.TextBox txtName;
-            private System.Windows.Forms.ComboBox comboBox1;
-            private System.Windows.Forms.RadioButton radioMale;
-            private System.Windows.Forms.RadioButton radioFemale;
-            private System.Windows.Forms.GroupBox groupBox1;
-            private System.Windows.Forms.CheckBox chkReading;
-            private System.Windows.Forms.CheckBox chkPainting;
-            private System.Windows.Forms.RadioButton radioMarried;
-            private System.Windows.Forms.RadioButton radioUnmarried;
-            private System.Windows.Forms.GroupBox groupBox2;
-            private System.Windows.Forms.Label label1;
-            private System.Windows.Forms.Button btnPreview;
         }
+
+        #endregion
+
+        private System.Windows.Forms.Label txtCustomerName;
+        private System.Windows.Forms.Label txtCountry;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton radioMale;
+        private System.Windows.Forms.RadioButton radioFemale;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkReading;
+        private System.Windows.Forms.CheckBox chkPainting;
+        private System.Windows.Forms.RadioButton radioMarried;
+        private System.Windows.Forms.RadioButton radioUnmarried;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPreview;
+        private System.Windows.Forms.DataGridView dtgCustomer;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnDelete;
     }
-
-
+}
