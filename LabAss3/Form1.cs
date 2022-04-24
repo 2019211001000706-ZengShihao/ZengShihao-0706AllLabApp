@@ -52,7 +52,7 @@ namespace LabAss3
 
         private void Form1_Load(object sender, EventArgs e)
         {//Open a Connection
-            string strConnection = "Data Source=DESKTOP-5VNV0V0\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
+            string strConnection = "Data Source=DESKTOP-5VNV0V0@2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
             //Fire a Command
@@ -77,7 +77,7 @@ namespace LabAss3
             if (radioMarried.Checked) Status = "1";
             else Status = "0";
             // open a Connection
-            string strConnection = "Data Source=DESKTOP-5VNV0V0\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
+            string strConnection = "Data Source=DESKTOP-5VNV0V0@2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
             //Fire a Command
@@ -102,7 +102,7 @@ namespace LabAss3
 
         private void displayCustomer(string id)
         {
-            string strConnection = "Data Source=DESKTOP-5VNV0V0\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
+            string strConnection = "Data Source=DESKTOP-5VNV0V0\\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
             // Fire a Command
@@ -158,7 +158,7 @@ namespace LabAss3
             if (radioMarried.Checked) Status = "1";
             else Status = "0";
             // open a Connection
-            string strConnection = "Data Source=DESKTOP-5VNV0V0\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
+            string strConnection = "Data Source=DESKTOP-5VNV0V0@2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
             //Fire a Command
@@ -181,7 +181,7 @@ namespace LabAss3
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string strConnection = "Data Source=DESKTOP-5VNV0V0\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
+            string strConnection = "Data Source=DESKTOP-5VNV0V0@2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
             // Fire a Command
