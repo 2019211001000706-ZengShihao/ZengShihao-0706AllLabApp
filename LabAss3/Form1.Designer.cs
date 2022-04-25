@@ -1,7 +1,7 @@
 ﻿namespace LabAss3
 {
     partial class Form1
-    {
+    {   
         /// <summary>
         /// 必需的设计器变量。
         /// </summary>
