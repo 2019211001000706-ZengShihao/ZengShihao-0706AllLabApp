@@ -101,7 +101,7 @@ namespace LabAss3
         }
 
         private void displayCustomer(string id)
-        {
+        {  
             string strConnection = "Data Source=DESKTOP-5VNV0V0\\2019;Initial Catalog=CustomerDB;Persist Security Info=True;User ID=sa;Pooling=False";
             SqlConnection objConnection = new SqlConnection(strConnection);
             objConnection.Open();
